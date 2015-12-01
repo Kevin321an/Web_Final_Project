@@ -11,7 +11,7 @@
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
 			"icon": "house-01"
-		} /*,
+		},
 		{
 			"latitude": 57.69673056015,
 			"longitude": 11.983023857146,
@@ -39,7 +39,7 @@
 		{
 			"latitude": 57.700204892242,
 			"longitude": 11.990469669371,
-			"title": "Ady new data",
+			"title": "Park Lane Restaurang AB",
 			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
 			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
 			"details_url": "map-property.html",
@@ -59,65 +59,6 @@
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
 			"icon": "house-05"
-		},
-		{
-			"latitude": 57.69678789506724,
-			"longitude": 11.974655365019544,
-			"title": "Park Lane Restaurang AB",
-			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
-			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
-			"details_url": "map-property.html",
-			"ribbon_mark_text": "Rent",
-			"ribbon_mark_class": "ribbon-primary",
-			"template": "real-estate-map-pop_home",
-			"icon": "house-06"
-		},
-		{
-			"latitude": 57.700594730493904,
-			"longitude": 11.972402309447034,
-			"title": "Park Lane Restaurang AB",
-			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
-			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
-			"details_url": "map-property.html",
-			"ribbon_mark_text": "Rent",
-			"ribbon_mark_class": "ribbon-primary",
-			"template": "real-estate-map-pop_home",
-			"icon": "house-07"
-		},
-		{
-			"latitude": 57.69794604095816,
-			"longitude": 11.972380851774915,
-			"title": "Park Lane Restaurang AB",
-			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
-			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
-			"details_url": "map-property.html",
-			"ribbon_mark_text": "Rent",
-			"ribbon_mark_class": "ribbon-primary",
-			"template": "real-estate-map-pop_home",
-			"icon": "house-08"
-		},
-		{
-			"latitude": 57.69819830544907,
-			"longitude": 11.979826664000257,
-			"name": "Adrian Demian",
-			"image": "images\/people\/50\/guy-6.jpg",
-			"email": "contact@mosaicpro.biz",
-			"no_properties": "24",
-			"details_url": "map-property.html",
-			"template": "real-estate-map-pop_profile",
-			"icon": "user-03"
-		},
-		{
-			"latitude": 57.69544623422918,
-			"longitude": 11.977852558165296,
-			"title": "Park Lane Restaurang AB",
-			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
-			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
-			"details_url": "map-property.html",
-			"ribbon_mark_text": "Rent",
-			"ribbon_mark_class": "ribbon-primary",
-			"template": "real-estate-map-pop_home",
-			"icon": "house-10"
-		} */
+		}
 	]
 }

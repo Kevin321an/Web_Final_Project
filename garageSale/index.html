@@ -185,8 +185,8 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                 <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-wrench"></i>Settings</a></li>
+               <!-- <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+                <li><a href="#"><i class="fa fa-wrench"></i>Settings</a></li> -->
                 <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
               </ul>
             </li>
@@ -501,7 +501,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!-- extra div for emulating position:fixed of the menu
         <div class="st-content-inner padding-top-none" id="content">  -->
 
-          <div id="google-fs-realestate" data-toggle="google-maps" data-file="js/data/google_maps/markers-listing.json" data-zoom-position="LEFT_BOTTOM" class="maps-google-fs"></div>
+          <div id="google-fs-realestate" data-toggle="google-maps" data-file="js/data/google_maps/markers-listing-filters.json" data-filters="true" data-zoom-position="LEFT_BOTTOM" class="maps-google-fs"></div>
 
           <nav class="navbar navbar-default navbar-size-large navbar-static-top navbar-map-overlay">
             <a data-toggle="sidebar-menu" href="#sidebar-map" class="toggle pull-right hidden-xs margin-none"><i class="fa fa-list"></i></a>
@@ -596,6 +596,20 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                 </div>
                 <p><a href="{{ details_url }}" class="h4 text-primary">{{ name }}</a></p>
                 <p>{{ location }}</p>
+              </div>
+            </div>
+          </script>
+          
+          <script id="map-filters-template" type="text/x-handlebars-template">
+            <div id="radios" class="map-overlay-sidebar overflow-hidden absolute top bottom left sr-only">
+              <div data-scrollable>
+                <h4>Filters</h4>
+                {{#each tags}}
+                  <div class="checkbox checkbox-primary">
+                    <input type="checkbox" checked id="map-filter-{{ @index }}" value="{{ this }}" />
+                    <label for="map-filter-{{ @index }}">{{ this }}</label>
+                  </div>
+                {{/each}}
               </div>
             </div>
           </script>
