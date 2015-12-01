@@ -1,0 +1,64 @@
+{
+	"markers": [
+		{
+			"latitude": 57.698656963659,
+			"longitude": 11.977981304198,
+			"title": "Park Lane Restaurang AB",
+			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
+			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
+			"details_url": "map-property.html",
+			"ribbon_mark_text": "Rent",
+			"ribbon_mark_class": "ribbon-primary",
+			"template": "real-estate-map-pop_home",
+			"icon": "house-01"
+		},
+		{
+			"latitude": 57.69673056015,
+			"longitude": 11.983023857146,
+			"title": "Park Lane Restaurang AB",
+			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
+			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
+			"details_url": "map-property.html",
+			"ribbon_mark_text": "Rent",
+			"ribbon_mark_class": "ribbon-primary",
+			"template": "real-estate-map-pop_home",
+			"icon": "house-02"
+		},
+		{
+			"latitude": 57.697349772451,
+			"longitude": 11.989074920684,
+			"title": "Park Lane Restaurang AB",
+			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
+			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
+			"details_url": "map-property.html",
+			"ribbon_mark_text": "Rent",
+			"ribbon_mark_class": "ribbon-primary",
+			"template": "real-estate-map-pop_home",
+			"icon": "house-03"
+		},
+		{
+			"latitude": 57.700204892242,
+			"longitude": 11.990469669371,
+			"title": "Park Lane Restaurang AB",
+			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
+			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
+			"details_url": "map-property.html",
+			"ribbon_mark_text": "Rent",
+			"ribbon_mark_class": "ribbon-primary",
+			"template": "real-estate-map-pop_home",
+			"icon": "house-04"
+		},
+		{
+			"latitude": 57.702199902618226,
+			"longitude": 11.994074558287366,
+			"title": "Park Lane Restaurang AB",
+			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
+			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
+			"details_url": "map-property.html",
+			"ribbon_mark_text": "Rent",
+			"ribbon_mark_class": "ribbon-primary",
+			"template": "real-estate-map-pop_home",
+			"icon": "house-05"
+		}
+	]
+}
