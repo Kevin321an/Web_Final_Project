@@ -86,405 +86,14 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
 
 </head>
 
-<body>
+<body ng-app="">
 
   <!-- Wrapper required for sidebar transitions -->
   <div class="st-container">
+      
+      <!-- Fixed navbar -->
+      <div ng-include="'header.html'"></div>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="#sidebar-menu" data-toggle="sidebar-menu" class="toggle pull-left visible-xs"><i class="fa fa-bars"></i></a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <a href="#sidebar-map" data-toggle="sidebar-menu" class="toggle pull-right visible-xs"><i class="fa fa-map-marker"></i></a>
-
-          <a class="navbar-brand" href="index.html">TALK - Garage Sale</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="main-nav">
-          <form class="navbar-form navbar-left margin-none">
-            <div class="search-1">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="icon-search"></i></span>
-                <input type="text" class="form-control form-control-w-150" placeholder="Search ..">
-              </div>
-            </div>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <!-- Login -->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-fw fa-lock"></i> Login
-              </a>
-              <div class="dropdown-menu dropdown-size-280">
-                <form>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      <input type="text" class="form-control" placeholder="Username">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-                      <input type="password" class="form-control" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
-                  </div>
-                </form>
-              </div>
-            </li>
-            <!-- // END login -->
-            <!-- Sign up -->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-fw fa-plus"></i> Sign Up
-              </a>
-              <div class="dropdown-menu dropdown-size-280">
-                <form>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group form-control-default">
-                        <label for="exampleInputFirstName">First name</label>
-                        <input type="email" class="form-control" id="exampleInputFirstName" placeholder="Your first name">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group form-control-default">
-                        <label for="exampleInputLastName">Last name</label>
-                        <input type="email" class="form-control" id="exampleInputLastName" placeholder="Your last name">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group form-control-default required">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group form-control-default required">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-            </li>
-            <!-- // END sign up -->
-            <!-- user -->
-            <li class="dropdown user">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-wrench"></i>Settings</a></li>
-                <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
-              </ul>
-            </li>
-            <!-- // END user -->
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-
-      </div>
-    </div>
-
-    <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) 
-    <aside class="sidebar left sidebar-size-1 sidebar-mini-reveal sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop" id=sidebar-menu data-type=collapse>
-      <div data-scrollable>
-        <ul class="sidebar-menu sm-bordered sm-icons-block sm-icons-right">
-          <li class="hasSubmenu open active">
-            <a href="#discover"><i class="fa fa-star"></i><span>Discover</span></a>
-            <ul id="discover" class="in">
-              <li class="active"><a href="index.html"><i class="fa fa-map-marker"></i><span>Full screen Map</span></a></li>
-              <li><a href="map-listing-list.html"><i class="fa fa-list"></i><span>Map Listing - List</span></a></li>
-              <li><a href="map-listing-grid.html"><i class="fa fa-th"></i><span>Map Listing - Grid</span></a></li>
-              <li><a href="listing.html"><i class="fa fa-list"></i><span>Listing - List</span></a></li>
-              <li><a href="listing-grid.html"><i class="fa fa-th"></i><span>Listing - Grid</span></a></li>
-              <li><a href="listing-map.html"><i class="fa fa-map-marker"></i><span>Listing - Map</span></a></li>
-            </ul>
-          </li>
-          <li class="hasSubmenu">
-            <a href="#property"><i class="fa fa-home"></i><span>Property</span></a>
-            <ul id="property">
-              <li><a href="map-property.html"><i class="fa fa-map-marker"></i><span>Map + Property</span></a></li>
-              <li><a href="property.html"><i class="fa fa-list"></i><span>Property details</span></a></li>
-            </ul>
-          </li>
-          <li><a href="map-edit.html"><i class="fa fa-pencil"></i><span>Add property</span></a></li>
-        </ul>
-        <h4 class="category">Map features</h4>
-        <ul class="sidebar-menu sm-icons-block sm-active-item-bg sm-icons-right">
-          <li><a href="map-filters.html"><i class="fa fa-search"></i><span>Map Filters</span></a></li>
-          <li><a href="map-themes.html"><i class="fa fa-eyedropper"></i><span>Map Themes</span></a></li>
-          <li><a href="map-markers.html"><i class="fa fa-map-marker"></i><span>Map Markers</span></a></li>
-        </ul>
-        <h4 class="category">Website pages</h4>
-        <div class="sidebar-block">
-          <ul class="list-group list-group-menu">
-            <li class="list-group-item"><a href="front-home-slider.html">Home + Slider</a></li>
-            <li class="list-group-item"><a href="front-home-map.html">Home + Map</a></li>
-            <li class="list-group-item"><a href="front-listing-list.html">Listing - List</a></li>
-            <li class="list-group-item"><a href="front-listing-grid.html">Listing - Grid</a></li>
-            <li class="list-group-item"><a href="front-property.html">Property</a></li>
-          </ul>
-        </div>
-        <h4 class="category">Versions</h4>
-        <div class="sidebar-block text-center">
-          <a class="btn btn-primary btn-block" href="../angular/index.html">
-            <strong>AngularJS</strong>
-          </a>
-          <a class="btn btn-primary active btn-block" href="index.html">
-            <strong>HTML</strong>
-          </a>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) 
-    <aside class="sidebar right sidebar-size-xs-1 sidebar-size-lg-48pc sidebar-size-40pc sidebar-offset-0 sidebar-skin-white" id=sidebar-map data-toggle-layout=sidebar-r-48pc-lg,sidebar-r-40pc data-toggle-bar=true data-overlay=false>
-      <div data-scrollable>
-
-        <div class="sidebar-block sidebar-block-full padding-none">
-          <div class="cover overlay hover cover-image-full height-220">
-            <img src="images/photodune-3979102-superb-backyard-xs.jpg" alt="people" />
-            <div class="overlay overlay-bg-black overlay-full">
-              <div class="v-center">
-                <h3 class="text-overlay text-headline">Featured Property</h3>
-                <p class="text-overlay text-subhead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <p class="text-h5">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-white"></span>
-                </p>
-              </div>
-            </div>
-            <a href="map-property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-              <span class="v-center">
-                <span class="btn btn-lg btn-red-500"><i class="fa fa-fw fa-star"></i> Details</span>
-              </span>
-            </a>
-          </div>
-        </div>
-
-        <h4 class="category">Properties</h4>
-        <div class="sidebar-block padding-none">
-          <div data-toggle="gridalicious" data-width="200">
-            <div class="panel panel-default relative">
-              <div class="ribbon-heading ribbon-primary inline absolute left margin-none">Sale</div>
-              <div class="cover hover overlay margin-none">
-                <img src="images/photodune-378874-real-estate-xs.jpg" alt="location" class="img-responsive" />
-                <a href="property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-                  <span class="v-center">
-                <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
-                  </span>
-                </a>
-              </div>
-              <div class="panel-body">
-                <h4 class="margin-v-0-5">Property for sale</h4>
-                <p class="small">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <span class="label label-grey-100">&euro;277,028.00</span>&nbsp;
-
-                <i class="small fa fa-fw icon-home-fill-1" data-toggle="tooltip" data-title="Agency"></i>
-
-                <a href="property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
-              </div>
-            </div>
-            <div class="panel panel-default relative">
-              <div class="ribbon-heading ribbon-default inline absolute left margin-none">Sale</div>
-              <div class="cover hover overlay margin-none">
-                <img src="images/photodune-195203-houses-xs.jpg" alt="location" class="img-responsive" />
-                <a href="property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-                  <span class="v-center">
-                <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
-                  </span>
-                </a>
-              </div>
-              <div class="panel-body">
-                <h4 class="margin-v-0-5">Property for sale</h4>
-                <p class="small">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <span class="label label-grey-100">&euro;82,331.00</span>&nbsp;
-
-                <i class="small fa fa-fw icon-home-fill-1" data-toggle="tooltip" data-title="Agency"></i>
-
-                <a href="property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
-              </div>
-            </div>
-            <div class="panel panel-default relative">
-              <div class="ribbon-heading ribbon-default inline absolute left margin-none">Sale</div>
-              <div class="cover hover overlay margin-none">
-                <img src="images/photodune-196089-house-xs.jpg" alt="location" class="img-responsive" />
-                <a href="property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-                  <span class="v-center">
-                <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
-                  </span>
-                </a>
-              </div>
-              <div class="panel-body">
-                <h4 class="margin-v-0-5">Property for sale</h4>
-                <p class="small">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <span class="label label-grey-100">&euro;81,662.00</span>&nbsp;
-
-                <i class="small fa fa-fw icon-user-1" data-toggle="tooltip" data-title="Individual"></i>
-
-                <a href="property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
-              </div>
-            </div>
-            <div class="panel panel-default relative">
-              <div class="ribbon-heading ribbon-primary inline absolute left margin-none">Rent</div>
-              <div class="cover hover overlay margin-none">
-                <img src="images/photodune-197173-residential-home-xs.jpg" alt="location" class="img-responsive" />
-                <a href="property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-                  <span class="v-center">
-                <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
-                  </span>
-                </a>
-              </div>
-              <div class="panel-body">
-                <h4 class="margin-v-0-5">Residential Home</h4>
-                <p class="small">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <span class="label label-grey-100">&euro;132,021.00</span>&nbsp;
-
-                <i class="small fa fa-fw icon-user-1" data-toggle="tooltip" data-title="Individual"></i>
-
-                <a href="property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
-              </div>
-            </div>
-            <div class="panel panel-default relative">
-              <div class="ribbon-heading ribbon-primary inline absolute left margin-none">Rent</div>
-              <div class="cover hover overlay margin-none">
-                <img src="images/photodune-3979102-superb-backyard-xs.jpg" alt="location" class="img-responsive" />
-                <a href="property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-                  <span class="v-center">
-                <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
-                  </span>
-                </a>
-              </div>
-              <div class="panel-body">
-                <h4 class="margin-v-0-5">Superb Backyard</h4>
-                <p class="small">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <span class="label label-grey-100">&euro;175,654.00</span>&nbsp;
-
-                <i class="small fa fa-fw icon-home-fill-1" data-toggle="tooltip" data-title="Agency"></i>
-
-                <a href="property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
-              </div>
-            </div>
-            <div class="panel panel-default relative">
-              <div class="ribbon-heading ribbon-default inline absolute left margin-none">Sale</div>
-              <div class="cover hover overlay margin-none">
-                <img src="images/photodune-2238345-apartments-xs.jpg" alt="location" class="img-responsive" />
-                <a href="property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-                  <span class="v-center">
-                <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
-                  </span>
-                </a>
-              </div>
-              <div class="panel-body">
-                <h4 class="margin-v-0-5">Apartment</h4>
-                <p class="small">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <span class="label label-grey-100">&euro;187,285.00</span>&nbsp;
-
-                <i class="small fa fa-fw icon-user-1" data-toggle="tooltip" data-title="Individual"></i>
-
-                <a href="property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
-              </div>
-            </div>
-            <div class="panel panel-default relative">
-              <div class="ribbon-heading ribbon-default inline absolute left margin-none">Sale</div>
-              <div class="cover hover overlay margin-none">
-                <img src="images/photodune-1112879-modern-kitchen-in-luxury-mansion-xs.jpg" alt="location" class="img-responsive" />
-                <a href="property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
-                  <span class="v-center">
-                <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
-                  </span>
-                </a>
-              </div>
-              <div class="panel-body">
-                <h4 class="margin-v-0-5">Luxury Mansion</h4>
-                <p class="small">
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                  <span class="fa fa-fw fa-star-o text-yellow-800"></span>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <span class="label label-grey-100">&euro;72,152.00</span>&nbsp;
-
-                <i class="small fa fa-fw icon-home-fill-1" data-toggle="tooltip" data-title="Agency"></i>
-
-                <a href="property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidebar-block equal-padding">
-          <ul class="pagination margin-none">
-            <li class="disabled"><a href="#">&laquo;</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">&raquo;</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </aside> -->
 
     <!-- sidebar effects OUTSIDE of st-pusher: -->
     <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
@@ -501,9 +110,9 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!-- extra div for emulating position:fixed of the menu
         <div class="st-content-inner padding-top-none" id="content">  -->
 
-          <div id="google-fs-realestate" data-toggle="google-maps" data-file="js/data/google_maps/markers-listing.json" data-zoom-position="LEFT_BOTTOM" class="maps-google-fs"></div>
+          <div id="google-fs-realestate" data-toggle="google-maps" data-file="js/data/google_maps/markers-listing-filters.json" data-filters="true" data-zoom-position="LEFT_BOTTOM" class="maps-google-fs"></div>
 
-          <nav class="navbar navbar-default navbar-size-large navbar-static-top navbar-map-overlay">
+          <!--<nav class="navbar navbar-default navbar-size-large navbar-static-top navbar-map-overlay">
             <a data-toggle="sidebar-menu" href="#sidebar-map" class="toggle pull-right hidden-xs margin-none"><i class="fa fa-list"></i></a>
             <div class="navbar-header">
               <div class="container-fluid">
@@ -511,7 +120,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                 <a class="toggle pull-right margin-none visible-xs" data-toggle="collapse" data-target="#map-nav"><i class="fa fa-sliders fa-rotate-90"></i></a>
               </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Collect the nav links, forms, and other content for toggling 
             <div class="collapse navbar-collapse" id="map-nav">
               <form class="navbar-form  navbar-left">
                 <div class="search-2">
@@ -524,7 +133,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                 </div>
               </form>
             </div>
-          </nav>
+          </nav> -->
 
           <script id="real-estate-map-pop-1" type="text/x-handlebars-template">
             <div class="padding-none full">
@@ -599,6 +208,20 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
               </div>
             </div>
           </script>
+          
+          <script id="map-filters-template" type="text/x-handlebars-template">
+            <div id="radios" class="map-overlay-sidebar overflow-hidden absolute top bottom left sr-only">
+              <div data-scrollable>
+                <h4>Filters</h4>
+                {{#each tags}}
+                  <div class="checkbox checkbox-primary">
+                    <input type="checkbox" checked id="map-filter-{{ @index }}" value="{{ this }}" />
+                    <label for="map-filter-{{ @index }}">{{ this }}</label>
+                  </div>
+                {{/each}}
+              </div>
+            </div>
+          </script>
 
         <!--</div>
          /st-content-inner -->
@@ -610,9 +233,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!-- /st-pusher -->
 
     <!-- Footer -->
-    <footer class="footer">
-      <strong>TALK - Garage Sale</strong> v1.0.0 Web Technology Final Project
-    </footer>
+    <div ng-include="'footer.html'"></div>
     <!-- // Footer -->
 
   </div>
@@ -678,6 +299,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!-- <script src="js/vendor/tree/jquery.fancytree-all.js"></script> -->
   <!-- <script src="js/vendor/nestable/jquery.nestable.js"></script> -->
   <!-- <script src="js/vendor/angular/all.js"></script> -->
+    <script src="js/vendor/angular/angular/angular.min.js"></script>
 
   <!-- App Scripts Bundle
     Includes Custom Application JavaScript used for the current theme/module;

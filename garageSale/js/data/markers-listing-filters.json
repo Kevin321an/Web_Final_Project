@@ -10,8 +10,12 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-01"
-		} /*,
+			"icon": "house-01",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
+		},
 		{
 			"latitude": 57.69673056015,
 			"longitude": 11.983023857146,
@@ -22,7 +26,11 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-02"
+			"icon": "house-02",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
 		},
 		{
 			"latitude": 57.697349772451,
@@ -34,19 +42,27 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-03"
+			"icon": "house-03",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
 		},
 		{
 			"latitude": 57.700204892242,
 			"longitude": 11.990469669371,
-			"title": "Ady new data",
+			"title": "Park Lane Restaurang AB",
 			"location": "Frana Supila 12, Ploce, 20000 Dubrovnik",
 			"image": "images\/photodune-3979102-superb-backyard-xs.jpg",
 			"details_url": "map-property.html",
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-04"
+			"icon": "house-04",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
 		},
 		{
 			"latitude": 57.702199902618226,
@@ -58,7 +74,11 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-05"
+			"icon": "house-05",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
 		},
 		{
 			"latitude": 57.69678789506724,
@@ -70,7 +90,11 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-06"
+			"icon": "house-06",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
 		},
 		{
 			"latitude": 57.700594730493904,
@@ -82,7 +106,11 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-07"
+			"icon": "house-07",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
 		},
 		{
 			"latitude": 57.69794604095816,
@@ -94,18 +122,11 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-08"
-		},
-		{
-			"latitude": 57.69819830544907,
-			"longitude": 11.979826664000257,
-			"name": "Adrian Demian",
-			"image": "images\/people\/50\/guy-6.jpg",
-			"email": "contact@mosaicpro.biz",
-			"no_properties": "24",
-			"details_url": "map-property.html",
-			"template": "real-estate-map-pop_profile",
-			"icon": "user-03"
+			"icon": "house-08",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
 		},
 		{
 			"latitude": 57.69544623422918,
@@ -117,7 +138,11 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop_home",
-			"icon": "house-10"
-		} */
+			"icon": "house-10",
+			"options": {
+				"bound": true,
+				"tags": ["House"]
+			}
+		}
 	]
 }

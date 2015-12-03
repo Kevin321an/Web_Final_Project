@@ -24,7 +24,8 @@
 			"ribbon_mark_text": "Rent",
 			"ribbon_mark_class": "ribbon-primary",
 			"template": "real-estate-map-pop-1",
-			"icon": "building-02"
+			"icon": "building-02",
+			"open": true
 		},
 		{
 			"latitude": 57.697372706019,
