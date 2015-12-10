@@ -1,28 +1,8 @@
-gulp --theme real-estate build:d --dist build
+Installation guide:
 
-gulp --theme real-estate build:d --minify true --debug true
+- clone project from github
+- install node.js from nodejs.org
+- go to the folder that your project is in
+- run "npm install" command to create the folder "node_modules"
+- run "node server.js" to start server
 
-
-src/less/themes/real-estate/app.less into build/real-estate/css/app/app.css
-
-gulp --theme real-estate build:d --minify true --debug true src/html/themes/real-estate/**/*.html into build/real-estate/**/*.html
-
-src/js/themes/real-estate/main.js into build/real-estate/js/app/main.js
-
-src/js/themes/real-estate/app.js into build/real-estate/js/app/app.js
-
-src/less/themes/real-estate/vendor/*.less into build/real-estate/css/vendor/*.css
-
-src/less/themes/real-estate/main.less into build/real-estate/css/app/main.css
-
-gulp --theme real-estate build:d --browserify true --debug true .build/browserify.json
-gulp --theme real-estate build:d --copy true --debug true src/images/themes/real-state/* into build/real-estate/images/*
-
-src/images/common/* into build/real-estate/images/*
-
-
-gulp --theme real-estate build:d --copy true --debug true copy.admin
-
-gulp --theme real-estate build:d --concat true --debug true concat.chat
-
-gulp --theme real-estate browserify:main
