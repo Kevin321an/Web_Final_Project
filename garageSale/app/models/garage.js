@@ -15,4 +15,4 @@ var GarageSchema = new Schema({ //internally
     items: [String]
 });
 
-module.exports = mongoose.model('Garage', GarageSchema); //externally 
+module.exports = mongoose.model('Garage', GarageSchema); //externally
