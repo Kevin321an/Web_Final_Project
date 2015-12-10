@@ -15,3 +15,9 @@ angular.module('garageSaleApp', [])
     };
     
 });
+/* // create the module and name it garageSaleApp
+var garageSaleApp = angular.module('garageSaleApp', ['ngRoute']);
+
+garageSaleApp.controller('userController', function($scope) {
+        $scope.message = 'Contact us! JK. This is just a demo.';
+    }); */

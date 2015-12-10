@@ -75,8 +75,11 @@ app.use('/api', router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/css",  express.static(__dirname + '/public/css'));
 app.use("/js", express.static(__dirname + '/public/js'));
+app.use("/data", express.static(__dirname + '/public/js/data'));
+app.use("/google_maps", express.static(__dirname + '/public/js/data/google_maps'));
 app.use("/images", express.static(__dirname + '/public/images'));
 app.use('/views', express.static(__dirname + '/views'));
+
 
 
 app.listen(port); //using express to listen to incoming requests

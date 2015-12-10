@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs" lang="en">
+<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs" lang="en" ng-app="garageSaleApp" ng-controller="mainController">
 
 <head>
   <meta charset="utf-8">
@@ -86,7 +86,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
 
 </head>
 
-<body ng-app="">
+<body>
 
   <!-- Wrapper required for sidebar transitions -->
   <div class="st-container">
@@ -95,8 +95,8 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
       <div ng-include="'header.html'"></div>
 
     <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
-    <aside class="sidebar right sidebar-size-xs-1 sidebar-size-lg-48pc sidebar-size-40pc sidebar-offset-0 sidebar-skin-white sidebar-visible-desktop" id=sidebar-edit data-toggle-layout=true data-toggle-bar=true>
-      <div data-scrollable>
+    <aside class="sidebar right sidebar-size-xs-1 sidebar-size-lg-48pc sidebar-size-40pc sidebar-offset-0 sidebar-skin-white sidebar-visible-desktop" id=sidebar-edit data-toggle-layout=true data-toggle-bar=true >
+      <div data-scrollable >
         <form action="#">
           <div class="sidebar-block">
             <h1 class="text-h3 sidebar-heading">Garage Sale Information</h1>
@@ -121,7 +121,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
             </div>
           </div>
           <div class="sidebar-block equal-padding">
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary" ng-click="createGarageSale()">Save</button>
             <button type="button" class="btn btn-default"><i class="fa fa-times fa-fw"></i> Cancel</button>
           </div>
         </form>
@@ -143,7 +143,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!-- this is the wrapper for the content -->
       <div class="st-content">
 
-          <div id="google-fs-realestate" data-toggle="google-maps" data-zoom="16" data-file="js/data/google_maps/markers-edit.json" data-id="map-edit" data-center="43.389758,-80.405068" data-zoom-position="LEFT_BOTTOM" class="maps-google-fs" data-style="nature"></div>
+          <div id="google-fs-realestate" data-toggle="google-maps" data-zoom="16" data-id="map-edit" data-center="43.389758,-80.405068" data-zoom-position="LEFT_BOTTOM" class="maps-google-fs" data-style="nature"></div>
 
           <div class="navbar navbar-default navbar-size-large navbar-static-top navbar-map-overlay">
             <div class="navbar-text"><i class="fa fa-fw fa-info"></i> Click on the map to add markers</div>
@@ -154,7 +154,8 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
             <div>
               <div class="form-group">
                 <label for="state">Province:</label>
-                <input id="state" disabled class="form-control" type="text" value="{{ state }}" />
+                <input id="state" disabled class="form-control" type="text" 
+                       ng-model="garageSale.state" value="{{ state }}" />
               </div>
               <div class="form-group">
                 <label for="country">Country:</label>
@@ -222,6 +223,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!-- <script src="js/vendor/nestable/jquery.nestable.js"></script> -->
   <!-- <script src="js/vendor/angular/all.js"></script> -->
     <script src="js/vendor/angular/angular/angular.min.js"></script>
+    <script src="js/app/mainController.js"></script>
 
   <!-- App Scripts Bundle
     Includes Custom Application JavaScript used for the current theme/module;
