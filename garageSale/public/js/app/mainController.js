@@ -2,7 +2,7 @@
 var garageSaleApp = angular.module('garageSaleApp', []);
 
 // create the controller and inject Angular's $scope
-garageSaleApp.controller('mainController', function($scope) {
+garageSaleApp.controller('mainController', function($scope, $http, $filter) {
 
       // when submitting the add form, send the text to the node API
     $scope.createUser = function() {
@@ -10,7 +10,6 @@ garageSaleApp.controller('mainController', function($scope) {
             .success(function(data) {
                 $scope.user = {}; // clear the form so our user is ready to enter another
                 $scope.user = data;
-                console.log(data);
             })
             .error(function(data) {
                 console.log('Error: ' + data);
@@ -19,15 +18,24 @@ garageSaleApp.controller('mainController', function($scope) {
     
     // when submitting the add form, send the text to the node API
     $scope.createGarageSale = function() {
-        console.log(angular.element('#state').val());
-        $http.post('/api/garageSale', $scope.garageSale)
+        $scope.garageSale.province = angular.element('#state').val();
+        $scope.garageSale.country = angular.element('#country').val();
+        $scope.garageSale.address = angular.element('#address').val();
+        
+        $scope.garageSale.date = $filter('date')($scope.garageSale.date, "yyyy-MM-dd");
+        $scope.garageSale.time = $filter('date')($scope.garageSale.time, "hh:mm A");
+        
+        $http.post('/api/garages', $scope.garageSale)
             .success(function(data) {
-                $scope.user = {}; // clear the form so our user is ready to enter another
-                $scope.user = data;
-                console.log(data);
+                $scope.garageSale = {}; // clear the form so our user is ready to enter another
+                $scope.garageSale = data;
             })
             .error(function(data) {
                 console.log('Error: ' + data);
             });
+    };
+    
+    $scope.cancelGarageSale = function() {
+       $scope.garageSale ={};
     };
 });

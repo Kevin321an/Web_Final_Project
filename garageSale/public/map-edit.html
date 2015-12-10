@@ -105,24 +105,24 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
             <h4 class="category">General information</h4>
             <div class="form-group form-control-default required">
               <label for="contact">Contact</label>
-              <input type="text" placeholder="Contact name" class="form-control" id="contact" />
+              <input type="text" placeholder="Contact name" class="form-control" id="contact" ng-model="garageSale.contactName" value="{{garageSale.contactName}}"/>
             </div>
             <div class="form-group form-control-default required">
                 <label for="phone">Phone number</label>
-               <input type="text" placeholder="Phone number" class="form-control" id="phone" />
+               <input type="text" placeholder="Phone number" class="form-control" id="phone" ng-model="garageSale.phoneNumber" value="{{garageSale.phoneNumber}}"/>
             </div>
             <div class="form-group form-control-default required">
                 <label for="garageDate">Date</label>
-               <input type="date" class="form-control" id="garageDate" />
+               <input type="date" class="form-control" id="garageDate" ng-model="garageSale.date" value="{{garageSale.date}}"/>
             </div>
             <div class="form-group form-control-default required">
                 <label for="garageTime">Time</label>
-               <input type="time" class="form-control" id="garageTime" />
+               <input type="time" class="form-control" id="garageTime" ng-model="garageSale.time" value="{{garageSale.time}}"/>
             </div>
           </div>
           <div class="sidebar-block equal-padding">
             <button type="submit" class="btn btn-primary" ng-click="createGarageSale()">Save</button>
-            <button type="button" class="btn btn-default"><i class="fa fa-times fa-fw"></i> Cancel</button>
+            <button type="button" class="btn btn-default" ng-click="cancelGarageSale()"><i class="fa fa-times fa-fw"></i> Cancel</button>
           </div>
         </form>
           <div class="sidebar-block">
@@ -155,15 +155,17 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
               <div class="form-group">
                 <label for="state">Province:</label>
                 <input id="state" disabled class="form-control" type="text" 
-                       ng-model="garageSale.state" value="{{ state }}" />
+                       ng-model="garageSale.province" value="{{ state }}" />
               </div>
               <div class="form-group">
                 <label for="country">Country:</label>
-                <input id="country" disabled class="form-control" type="text" value="{{ country }}" />
+                <input id="country" disabled class="form-control" type="text" 
+                       ng-model="garageSale.country" value="{{ country }}" />
               </div>
               <div class="form-group">
                 <label for="address">Address:</label>
-                <input id="address" disabled class="form-control" type="text" value="{{ address }}" />
+                <input id="address" disabled class="form-control" type="text" 
+                       ng-model="garageSale.address" value="{{ address }}" />
               </div>
               <div class="form-group">
                 <button type="button" id="map-delete-marker" data-id="{{ id }}" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
