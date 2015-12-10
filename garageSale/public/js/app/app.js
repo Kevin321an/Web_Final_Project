@@ -1756,7 +1756,7 @@ module.exports=require("C:\\wamp\\www\\themekit-4.0.0\\lib\\essential\\js\\_skin
                 bindFind(marker, markerData, data);
 
             });
-
+            
         }
 
     });
