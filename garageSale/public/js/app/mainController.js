@@ -23,7 +23,7 @@ garageSaleApp.controller('mainController', function($scope, $http, $filter) {
         $scope.garageSale.address = angular.element('#address').val();
         
         $scope.garageSale.date = $filter('date')($scope.garageSale.date, "yyyy-MM-dd");
-        $scope.garageSale.time = $filter('date')($scope.garageSale.time, "hh:mm A");
+        $scope.garageSale.time = $filter('date')($scope.garageSale.time, "HH:mm");
         
         $http.post('/api/garages', $scope.garageSale)
             .success(function(data) {
