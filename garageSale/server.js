@@ -18,6 +18,7 @@ mongoose.connection.on('error', function(err){console.log(err);})
 
 //load models
 var User = require('./app/models/user');
+var Garage = require('./app/models/garage');
 
 //setup router
 var router = express.Router();
@@ -63,6 +64,39 @@ router.route('/users/:user_id')
             res.json(user);
         });
     });
+
+
+//Garage
+router.route('/garages')
+		
+	.get(function(req, res){
+		Garage.find(function(err, garages){ //return an error or users
+			if (err){
+				res.send(err);
+			}
+			res.json(garages);
+		});
+	})
+
+    .post(function(req, res){
+        var garage = new Garage();
+        garage.province = req.body.province;
+        garage.country = req.body.country;
+        garage.address = req.body.address;
+        garage.contactName = req.body.contactName;
+        garage.phoneNumber = req.body.phoneNumber;
+        garage.date = req.body.date;
+        garage.time = req.body.time;
+        
+        garage.save(function(err){
+            if (err){
+                res.send(err);
+            }
+            
+            res.json(garage);
+        });
+    });
+
 
 //launch application
 app.get('/', function(req, res) {
