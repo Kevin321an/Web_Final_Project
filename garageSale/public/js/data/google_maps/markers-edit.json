@@ -1,0 +1,14 @@
+{
+	"markers": [
+		{
+			"latitude": 43.389758, 
+			"longitude": -80.405068,
+			"state": "",
+			"country": "",
+			"address": "",
+			"template": "tpl-edit",
+			"icon": "house-02",
+			"open": true
+		}
+	]
+}
