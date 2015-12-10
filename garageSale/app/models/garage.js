@@ -5,8 +5,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var GarageSchema = new Schema({ //internally
-    province: String,
+    latitude: Number, 
+    longitude: Number,
     country: String,
+    province: String,
     address: String,
 	contactName: String,
 	phoneNumber: String,
