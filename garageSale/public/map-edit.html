@@ -97,7 +97,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
     <aside class="sidebar right sidebar-size-xs-1 sidebar-size-lg-48pc sidebar-size-40pc sidebar-offset-0 sidebar-skin-white sidebar-visible-desktop" id=sidebar-edit data-toggle-layout=true data-toggle-bar=true >
       <div data-scrollable >
-        <form action="#">
+        <form name="form" ng-submit="submitForm(form.$valid)" novalidate>
           <div class="sidebar-block">
             <h1 class="text-h3 sidebar-heading">Garage Sale Information</h1>
           </div>
@@ -105,23 +105,23 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
             <h4 class="category">General information</h4>
               <div class="form-group form-control-default required">
               <label for="title">Title</label>
-              <input type="text" placeholder="Title" class="form-control" id="title" ng-model="garageSale.title" value="{{garageSale.title}}"/>
+              <input type="text" placeholder="Title" class="form-control" id="title" ng-model="garageSale.title" value="{{garageSale.title}}" required/>
             </div>
-            <div class="form-group form-control-default required">
+            <div class="form-group form-control-default">
               <label for="contact">Contact</label>
               <input type="text" placeholder="Contact name" class="form-control" id="contact" ng-model="garageSale.contactName" value="{{garageSale.contactName}}"/>
             </div>
-            <div class="form-group form-control-default required">
+            <div class="form-group form-control-default">
                 <label for="phone">Phone number</label>
                <input type="text" placeholder="Phone number" class="form-control" id="phone" ng-model="garageSale.phoneNumber" value="{{garageSale.phoneNumber}}"/>
             </div>
             <div class="form-group form-control-default required">
                 <label for="garageDate">Date</label>
-               <input type="date" class="form-control" id="garageDate" ng-model="garageSale.date" value="{{garageSale.date}}"/>
+               <input type="date" class="form-control" id="garageDate" ng-model="garageSale.date" value="{{garageSale.date}}" required/>
             </div>
             <div class="form-group form-control-default required">
                 <label for="garageTime">Time</label>
-               <input type="time" class="form-control" id="garageTime" ng-model="garageSale.time" value="{{garageSale.time}}"/>
+               <input type="time" class="form-control" id="garageTime" ng-model="garageSale.time" value="{{garageSale.time}}" required/>
             </div>
           </div>
           <div class="sidebar-block equal-padding">
@@ -199,36 +199,6 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
     To learn more about the development process, please refer to the documentation.
     Do not use it simultaneously with the separate bundles above. -->
   <script src="js/vendor/all.js"></script>
-
-  <!-- Vendor Scripts Standalone Libraries -->
-  <!-- <script src="js/vendor/core/all.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery.js"></script> -->
-  <!-- <script src="js/vendor/core/bootstrap.js"></script> -->
-  <!-- <script src="js/vendor/core/breakpoints.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery.nicescroll.js"></script> -->
-  <!-- <script src="js/vendor/core/isotope.pkgd.js"></script> -->
-  <!-- <script src="js/vendor/core/packery-mode.pkgd.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery.grid-a-licious.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery.cookie.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery-ui.custom.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery.hotkeys.js"></script> -->
-  <!-- <script src="js/vendor/core/handlebars.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery.hotkeys.js"></script> -->
-  <!-- <script src="js/vendor/core/load_image.js"></script> -->
-  <!-- <script src="js/vendor/core/jquery.debouncedresize.js"></script> -->
-  <!-- <script src="js/vendor/tables/all.js"></script> -->
-  <!-- <script src="js/vendor/forms/all.js"></script> -->
-  <!-- <script src="js/vendor/media/all.js"></script> -->
-  <!-- <script src="js/vendor/player/all.js"></script> -->
-  <!-- <script src="js/vendor/charts/all.js"></script> -->
-  <!-- <script src="js/vendor/charts/flot/all.js"></script> -->
-  <!-- <script src="js/vendor/charts/easy-pie/jquery.easypiechart.js"></script> -->
-  <!-- <script src="js/vendor/charts/morris/all.js"></script> -->
-  <!-- <script src="js/vendor/charts/sparkline/all.js"></script> -->
-  <!-- <script src="js/vendor/maps/vector/all.js"></script> -->
-  <!-- <script src="js/vendor/tree/jquery.fancytree-all.js"></script> -->
-  <!-- <script src="js/vendor/nestable/jquery.nestable.js"></script> -->
-  <!-- <script src="js/vendor/angular/all.js"></script> -->
     <script src="js/vendor/angular/angular/angular.min.js"></script>
     <script src="js/app/mainController.js"></script>
 
