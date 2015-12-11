@@ -22,9 +22,6 @@ var Garage = require('./app/models/garage');
 
 //setup router
 var router = express.Router();
-//router.get('/', function (req, res){
-//	res.json({'message': 'Json is running'});
-//});
 
 router.route('/users')
 		
@@ -80,13 +77,24 @@ router.route('/garages')
 
     .post(function(req, res){
         var garage = new Garage();
-        garage.province = req.body.province;
-        garage.country = req.body.country;
-        garage.address = req.body.address;
+        garage.latitude = req.body.latitude;
+        garage.longitude = req.body.longitude;
+        garage.title = req.body.title;
+        garage.location = req.body.location;
+        
+        //template values
+        garage.image = req.body.image;
+        garage.details_url = req.body.details_url;
+        garage.ribbon_mark_text = req.body.ribbon_mark_text;
+        garage.ribbon_mark_class = req.body.ribbon_mark_class;
+        garage.template = req.body.template;
+        garage.icon = req.body.icon;
+        garage.options = req.body.options;
         garage.contactName = req.body.contactName;
         garage.phoneNumber = req.body.phoneNumber;
         garage.date = req.body.date;
         garage.time = req.body.time;
+       
         
         garage.save(function(err){
             if (err){
@@ -105,7 +113,6 @@ app.get('/', function(req, res) {
 });
 
 app.use('/api', router);
-//app.use('/', router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/css",  express.static(__dirname + '/public/css'));
 app.use("/js", express.static(__dirname + '/public/js'));

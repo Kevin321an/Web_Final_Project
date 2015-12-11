@@ -103,6 +103,10 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
           </div>
           <div class="sidebar-block">
             <h4 class="category">General information</h4>
+              <div class="form-group form-control-default required">
+              <label for="title">Title</label>
+              <input type="text" placeholder="Title" class="form-control" id="title" ng-model="garageSale.title" value="{{garageSale.title}}"/>
+            </div>
             <div class="form-group form-control-default required">
               <label for="contact">Contact</label>
               <input type="text" placeholder="Contact name" class="form-control" id="contact" ng-model="garageSale.contactName" value="{{garageSale.contactName}}"/>
@@ -152,6 +156,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
 
           <script id="tpl-edit" type="text/x-handlebars-template">
             <div>
+                <label>123</label>
               <div class="form-group">
                 <label for="state">Province:</label>
                 <input id="state" disabled class="form-control" type="text" 
@@ -165,7 +170,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
               <div class="form-group">
                 <label for="address">Address:</label>
                 <input id="address" disabled class="form-control" type="text" 
-                       ng-model="garageSale.address" value="{{ address }}" />
+                       ng-model="garageSale.location" value="{{ address }}" />
               </div>
               <div class="form-group">
                 <button type="button" id="map-delete-marker" data-id="0" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
