@@ -67,7 +67,7 @@ router.route('/users/:user_id')
 router.route('/garages')
 		
 	.get(function(req, res){
-		Garage.find(function(err, garages){ //return an error or users
+		Garage.find(function(err, garages){ //return an error or garages
 			if (err){
 				res.send(err);
 			}

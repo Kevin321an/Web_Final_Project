@@ -16120,3 +16120,12 @@ table.fancytree-ext-table.fancytree-treefocus tbody tr.fancytree-active span.fan
 .red{
     color: red;
 }
+
+.alert-fixed {
+    position:fixed; 
+    bottom: 0px; 
+    right: 0px; 
+    width: 50%;
+    z-index:9999; 
+    border-radius:0px
+}

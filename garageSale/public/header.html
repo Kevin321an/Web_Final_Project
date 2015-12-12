@@ -1,6 +1,6 @@
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation"
-      ng-controller="mainController">
+      ng-controller="userController">
   <div class="container-fluid">
     <div class="navbar-header">
       <a href="#sidebar-menu" data-toggle="sidebar-menu" class="toggle pull-left visible-xs"><i class="fa fa-bars"></i></a>
@@ -66,6 +66,7 @@
             <i class="fa fa-fw fa-plus"></i> Sign Up
           </a>
           <div class="dropdown-menu dropdown-size-280">
+            <div flash-message="5000" class="alert-fixed"></div> 
             <form>
               <div class="row">
                 <div class="col-md-6">
