@@ -1,8 +1,10 @@
 // create the module and name it garageSaleApp
-var garageSaleApp = angular.module('garageSaleApp', []);
+var garageSaleApp = angular.module('garageSaleApp', ['ngMessages']);
 
 // create the controller and inject Angular's $scope
 garageSaleApp.controller('mainController', function($scope, $http, $filter) {
+    
+    $scope.submitted = false;
 
       // when submitting the add form, send the text to the node API
     $scope.createUser = function() {
@@ -17,14 +19,15 @@ garageSaleApp.controller('mainController', function($scope, $http, $filter) {
     };
     
     // when submitting the add form, send the text to the node API
-    //$scope.createGarageSale = function() {
+    $scope.createGarageSale = function(isValid) {
         
-    $scope.submitForm = function(isValid) {
+    //$scope.submitForm = function(isValid) {
         
         $scope.submitted = true;
 
         // check to make sure the form is completely valid
         if (isValid) {
+            $scope.submitted = false;
             
             //setting formats
             $scope.garageSale.date = $filter('date')($scope.garageSale.date, "yyyy-MM-dd");
@@ -50,14 +53,14 @@ garageSaleApp.controller('mainController', function($scope, $http, $filter) {
                     //after getting all the values for garage, save it
                     $http.post('/api/garages', $scope.garageSale)
                         .success(function(data) {
-                            $scope.garageSale = {}; // clear the form so our user is ready to enter another
                             $scope.garageSale = data;
+                            $scope.submitted = true;
                         })
                         .error(function(data) {
                             console.log('Error: ' + data);
                         });
                 } else {
-                  alert('Geocode was not successful for the following reason: ' + status);
+                  alert('Please, click on the map to add markers');
                 }
             });
           

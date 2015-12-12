@@ -16117,3 +16117,6 @@ table.fancytree-ext-table.fancytree-treefocus tbody tr.fancytree-active {
 table.fancytree-ext-table.fancytree-treefocus tbody tr.fancytree-active span.fancytree-node {
   background-color: #428bca;
 }
+.red{
+    color: red;
+}
