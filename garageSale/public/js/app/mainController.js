@@ -1,27 +1,51 @@
 // create the module and name it garageSaleApp
-var garageSaleApp = angular.module('garageSaleApp', ['ngMessages']);
+var garageSaleApp = angular.module('garageSaleApp', ['ngMessages', 'flash', 'ngCookies']);
 
 // create the controller and inject Angular's $scope
-garageSaleApp.controller('mainController', function($scope, $http, $filter) {
+garageSaleApp.controller('mainController', function($scope, $http) {  
     
-    $scope.submitted = false;
 
-      // when submitting the add form, send the text to the node API
+});
+
+// create the controller and inject Angular's $scope
+garageSaleApp.controller('userController', function($scope, $http, Flash, $cookies) {
+    
+    // when submitting the add form, send the text to the node API
     $scope.createUser = function() {
         $http.post('/api/users', $scope.user)
             .success(function(data) {
                 $scope.user = {}; // clear the form so our user is ready to enter another
-                $scope.user = data;
+                var message = '<strong>Success!</strong> User created.';
+                Flash.create('success', message);
             })
             .error(function(data) {
                 console.log('Error: ' + data);
             });
     };
+});
+
+// create the controller and inject Angular's $scope
+garageSaleApp.controller('garageController', function($scope, $http, $filter, Flash, $cookies) {
     
+    //system messages
+    var message = '';
+    
+     //to save garageSaleId on each item
+    var garageSaleId = $cookies['garageSaleId'];
+    
+     //to control if the form was submitted
+    $scope.submitted = false;
+    
+    //not allow to submit form twice
+    $scope.disableSaveButton = false;
+    
+    $scope.cancelGarageSale = function() {
+       $scope.garageSale ={};
+    };
+    
+   
     // when submitting the add form, send the text to the node API
     $scope.createGarageSale = function(isValid) {
-        
-    //$scope.submitForm = function(isValid) {
         
         $scope.submitted = true;
 
@@ -54,23 +78,31 @@ garageSaleApp.controller('mainController', function($scope, $http, $filter) {
                     $http.post('/api/garages', $scope.garageSale)
                         .success(function(data) {
                             $scope.garageSale = data;
+                            $cookies.garageSaleId = $scope.garageSale._id;
                             $scope.submitted = true;
+                            $scope.disableSaveButton = true;
+                            message = '<strong>Success!</strong> Now you can add items.';
+                            Flash.create('success', message);
                         })
                         .error(function(data) {
                             console.log('Error: ' + data);
                         });
                 } else {
-                  alert('Please, click on the map to add markers');
+                    message = '<strong>Info!</strong> Please, click on the map to add markers.';
+                    Flash.create('warning', message);
                 }
             });
           
         }
 
       };  
-
-  //  };
     
-    $scope.cancelGarageSale = function() {
-       $scope.garageSale ={};
-    };
 });
+
+// create the controller and inject Angular's $scope
+garageSaleApp.controller('itemController', function($scope, $http, $filter, Flash, $cookies) {
+     //to save garageSaleId on each item
+    var garageSaleId = $cookies['garageSaleId'];
+    alert(garageSaleId);
+});
+
