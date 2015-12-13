@@ -44,17 +44,17 @@
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control" placeholder="Username" ng-model="login.email" id="exampleemail" value="{{login.email}}">
                 </div>
               </div>
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" class="form-control" placeholder="Password" ng-model="login.password" id="exampleInputPassword" value="{{login.password}}">
                 </div>
               </div>
               <div class="text-center">
-                <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
+                <button type="submit" class="btn btn-primary" ng-click="createUser()">Login <i class="fa fa-sign-in"></i></button>
               </div>
             </form>
           </div>

@@ -6,7 +6,11 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+
 var path    = require("path");
+
+var bodyParser   = require('body-parser');
+
 
 app.use(bodyParser.urlencoded({extended: true})); //to read the body in a friendly way
 app.use(bodyParser.json()); // to respond with a json format
@@ -19,9 +23,12 @@ mongoose.connection.on('error', function(err){console.log(err);})
 //load models
 var User = require('./app/models/user');
 var Garage = require('./app/models/garage');
+var Login = require('./app/models/login');
 
 //setup router
 var router = express.Router();
+
+
 
 router.route('/users')
 		
@@ -45,7 +52,6 @@ router.route('/users')
             if (err){
                 res.send(err);
             }
-            
             res.json(user);
         });
     });
@@ -104,6 +110,34 @@ router.route('/garages')
             res.json(garage);
         });
     });
+
+router.route('/')
+		
+	.get(function(req, res){
+		User.find(function(err, users){ //return an error or users
+			if (err){
+				res.send(err);
+			}
+			res.json(users);
+		});
+	})
+.post(function(req,res){
+var firstname=req.body.firstName;
+var password=req.body.password;
+User.findOne({firstName: firstName, password: password},function(err,user){
+    if(err)
+    {
+        console.log(err);
+        return res.status(500).send();
+    }
+    if(!user)
+    {
+        return res.status(404).send();
+    }
+     res.json(user);
+    return res.status(200).send();
+    })
+});
 
 
 //launch application
