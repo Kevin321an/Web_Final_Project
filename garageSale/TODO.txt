@@ -1,0 +1,20 @@
+TO DO:
+------
+
+Items:
+get some pictures to sell items (we have a sofa and a bed) save them on garageSale\public\images
+Prepare the screen to use angularjs
+validate fields before saving
+create schema
+server URL
+Read data from database and display on screen
+
+Garage:
+Read data from database and display on map
+work on delete markers (if really necessary)
+
+
+User:
+Login
+save password using encryption
+put "Add Garage Sale" and "login picture" buttons hidden until login is completed
