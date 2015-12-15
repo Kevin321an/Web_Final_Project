@@ -10,12 +10,12 @@ var mongoose = require('mongoose');
 var path    = require("path");
 
 var bodyParser   = require('body-parser');
-var session = require('express-session');
+var session = require('express-session');//calling sessions
 
 
 app.use(bodyParser.urlencoded({extended: true})); //to read the body in a friendly way
 app.use(bodyParser.json()); // to respond with a json format
-app.use(session({secret:"session1",resave:false, saveUninitialized:true}));
+app.use(session({secret:"session1",resave:false, saveUninitialized:true}));//Using sessions here with its unique id
 
 //setup DB connection
 mongoose.set('debug', true);
@@ -136,7 +136,7 @@ router.route('/login')
             if (!user) {
                 return res.status(404).send();
             }
-            req.session.user=user;
+            req.session.user=user;//Saving session in user Object
             res.json(user);
              //console.log("User Login");
             return res.status(200).send();
@@ -144,10 +144,15 @@ router.route('/login')
     });
 
 router.get('/dashboard',function(req,res){
-    if(!req.session.user){
+    if(!req.session.user){                          //Checking users sessions
         return res.status(401).send();
     }
-    return res.status(200).send("Welcome");
+    return res.status(200).send("Welcome");         //return Something if user passed login..session created
+});
+
+router.get('/logout',function(req,res){             //Destroying Sessions
+    req.session.destroy();
+    return res.status(200).send();
 })
 
 //launch application
