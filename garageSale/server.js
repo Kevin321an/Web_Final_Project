@@ -23,7 +23,7 @@ mongoose.connection.on('error', function(err){console.log(err);})
 //load models
 var User = require('./app/models/user');
 var Garage = require('./app/models/garage');
-var Login = require('./app/models/login');
+
 
 //setup router
 var router = express.Router();
@@ -111,34 +111,34 @@ router.route('/garages')
         });
     });
 
-router.route('/')
-		
-	.get(function(req, res){
-		User.find(function(err, users){ //return an error or users
-			if (err){
-				res.send(err);
-			}
-			res.json(users);
-		});
-	})
-.post(function(req,res){
-var firstname=req.body.firstName;
-var password=req.body.password;
-User.findOne({firstName: firstName, password: password},function(err,user){
-    if(err)
-    {
-        console.log(err);
-        return res.status(500).send();
-    }
-    if(!user)
-    {
-        return res.status(404).send();
-    }
-     res.json(user);
-    return res.status(200).send();
+router.route('/login')
+.get(function (req, res) {
+        User.find(function (err, users) { //return an error or users
+            if (err) {
+                res.send(err);
+            }
+            res.json(users);
+        });
     })
-});
-
+    .post(function (req, res) {
+        var email = req.body.email;
+        var password = req.body.password;
+        User.findOne({
+            email: email,
+            password: password
+        }, function (err, user) {
+            if (err) {
+                console.log(err);
+                return res.status(500).send();
+            }
+            if (!user) {
+                return res.status(404).send();
+            }
+            res.json(user);
+             //console.log("User Login");
+            return res.status(200).send();
+        })
+    });
 
 //launch application
 app.get('/', function(req, res) {

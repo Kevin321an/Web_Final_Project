@@ -15,7 +15,7 @@
 
       <a class="navbar-brand" href="index.html">TALK - Garage Sale</a>
     </div>
-
+      <div flash-message="5000" class="alert-fixed"></div> <!--showing message created-->
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-nav">
       <form class="navbar-form navbar-left margin-none">
@@ -44,17 +44,17 @@
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <input type="text" class="form-control" placeholder="Username" ng-model="login.email" id="exampleemail" value="{{login.email}}">
+                  <input type="text" class="form-control" placeholder="Username" ng-model="user.email" id="exampleemail" value="{{user.email}}">
                 </div>
               </div>
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-                  <input type="password" class="form-control" placeholder="Password" ng-model="login.password" id="exampleInputPassword" value="{{login.password}}">
+                  <input type="password" class="form-control" placeholder="Password" ng-model="user.password" id="exampleInputPassword" value="{{user.password}}">
                 </div>
               </div>
               <div class="text-center">
-                <button type="submit" class="btn btn-primary" ng-click="createUser()">Login <i class="fa fa-sign-in"></i></button>
+                <button type="submit" class="btn btn-primary" ng-click="login()">Login <i class="fa fa-sign-in"></i></button>
               </div>
             </form>
           </div>
