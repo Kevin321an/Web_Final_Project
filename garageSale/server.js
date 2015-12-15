@@ -153,7 +153,7 @@ router.get('/dashboard',function(req,res){
 router.get('/logout',function(req,res){             //Destroying Sessions
     req.session.destroy();
     return res.status(200).send();
-})
+});
 
 //launch application
 app.get('/', function(req, res) {
