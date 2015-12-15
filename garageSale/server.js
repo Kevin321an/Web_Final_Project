@@ -10,10 +10,12 @@ var mongoose = require('mongoose');
 var path    = require("path");
 
 var bodyParser   = require('body-parser');
+var session=require('express-session');
 
 
 app.use(bodyParser.urlencoded({extended: true})); //to read the body in a friendly way
 app.use(bodyParser.json()); // to respond with a json format
+app.use(session({secret:"session1",resave:false,saveUninitialized:true}));
 
 //setup DB connection
 mongoose.set('debug', true);
@@ -136,9 +138,17 @@ router.route('/login')
             }
             res.json(user);
              //console.log("User Login");
+            req.session.user=user;
             return res.status(200).send();
         })
     });
+
+router.get('/dashboard',function(req,res){
+    if(!req.session.login){
+        return res.status(401).send();
+    }
+    return res.status(200).send("Welcome");
+});
 
 //launch application
 app.get('/', function(req, res) {
