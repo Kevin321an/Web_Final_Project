@@ -10,11 +10,11 @@ server URL
 Read data from database and display on screen
 
 Garage:
-Read data from database and display on map
+Ady - Read data from database and display on map
 work on delete markers (if really necessary)
 
 
 User:
-Login
+Lalit - Login
 save password using encryption
 put "Add Garage Sale" and "login picture" buttons hidden until login is completed
