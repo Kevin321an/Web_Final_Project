@@ -34,6 +34,29 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
                 console.log('Error: ' + data);
             });
     };
+    $scope.login = function() {
+        $http.post('/api/login', $scope.user)
+            .success(function(data) {
+                //$scope.user = {}; // clear the form so our user is ready to enter another
+                var message = '<strong>Success!</strong> Login done.';
+                Flash.create('success', message);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+    };
+     $scope.logout = function() {
+        $http.post('/api/logout', $scope.user)
+            .success(function(data) {
+                //$scope.user = {}; // clear the form so our user is ready to enter another
+                var message = '<strong>Success!</strong> Logout done.';
+                Flash.create('success', message);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+    };
+    
 });
 
 // create the controller and inject Angular's $scope
