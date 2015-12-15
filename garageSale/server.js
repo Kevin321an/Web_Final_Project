@@ -7,6 +7,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path    = require("path");
+var fs = require('fs');
 
 app.use(bodyParser.urlencoded({extended: true})); //to read the body in a friendly way
 app.use(bodyParser.json()); // to respond with a json format
@@ -71,7 +72,17 @@ router.route('/garages')
 			if (err){
 				res.send(err);
 			}
-			res.json(garages);
+            
+            //save all the garages found in a json file, so map can read it
+            var text = '{"markers": ' + JSON.stringify(garages, null, 4) + '}';
+           fs.writeFile('public/js/data/google_maps/markers-listing-filters.json', text, function (err) {
+            if (err){
+				res.send(err);
+			}
+              console.log('File saved');
+               res.json(garages);
+            });  
+			
 		});
 	})
 

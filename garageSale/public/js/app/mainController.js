@@ -4,6 +4,17 @@ var garageSaleApp = angular.module('garageSaleApp', ['ngMessages', 'flash', 'ngC
 // create the controller and inject Angular's $scope
 garageSaleApp.controller('mainController', function($scope, $http) {  
     
+    // when landing on the page, get all garages and show them
+    var promise = $http.get('/api/garages');
+    
+    promise.then(
+        function(data) {
+           
+        }, 
+        function(err) {
+            console.log('Error: ' + err);
+        }
+    ); 
 
 });
 
@@ -17,6 +28,7 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
                 $scope.user = {}; // clear the form so our user is ready to enter another
                 var message = '<strong>Success!</strong> User created.';
                 Flash.create('success', message);
+            
             })
             .error(function(data) {
                 console.log('Error: ' + data);
@@ -71,7 +83,12 @@ garageSaleApp.controller('garageController', function($scope, $http, $filter, Fl
                     $scope.garageSale.ribbon_mark_text = "Garage Sale";
                     $scope.garageSale.ribbon_mark_class = "ribbon-primary";
                     $scope.garageSale.template = "real-estate-map-pop_home";
-                    $scope.garageSale.icon = "house-02";
+                    //randomly set the icon house
+                    var house = Math.floor((Math.random() * 10) + 1);
+                    if (house < 10){
+                        house = "0"+ house;
+                    }
+                    $scope.garageSale.icon = "house-" + house;
                     $scope.garageSale.options = {bound: true, tags: ["House"]};
 
                     //after getting all the values for garage, save it
