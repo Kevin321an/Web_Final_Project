@@ -8,6 +8,7 @@ validate fields before saving
 create schema
 server URL
 Read data from database and display on screen
+Ady - Setting informations to display items on screen
 
 Garage:
 Ady - Read data from database and display on map

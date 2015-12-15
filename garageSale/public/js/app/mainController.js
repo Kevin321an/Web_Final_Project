@@ -117,9 +117,12 @@ garageSaleApp.controller('garageController', function($scope, $http, $filter, Fl
 });
 
 // create the controller and inject Angular's $scope
-garageSaleApp.controller('itemController', function($scope, $http, $filter, Flash, $cookies) {
-     //to save garageSaleId on each item
+garageSaleApp.controller('itemController', function($scope, $http, $filter, Flash, $cookies, $location) {
+    //to save garageSaleId on each item
     var garageSaleId = $cookies['garageSaleId'];
     alert(garageSaleId);
+    
+    // to read the garage sale choosen from index page
+    alert($location.search().garage_id);
 });
 
