@@ -60,13 +60,10 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
 });
 
 // create the controller and inject Angular's $scope
-garageSaleApp.controller('garageController', function($scope, $http, $filter, Flash, $cookies) {
+garageSaleApp.controller('garageController', function($scope, $http, $filter, Flash, $cookies, $location) {
     
     //system messages
     var message = '';
-    
-     //to save garageSaleId on each item
-    var garageSaleId = $cookies['garageSaleId'];
     
      //to control if the form was submitted
     $scope.submitted = false;
@@ -113,6 +110,7 @@ garageSaleApp.controller('garageController', function($scope, $http, $filter, Fl
                     }
                     $scope.garageSale.icon = "house-" + house;
                     $scope.garageSale.options = {bound: true, tags: ["House"]};
+                    $scope.garageSale.open = false;
 
                     //after getting all the values for garage, save it
                     $http.post('/api/garages', $scope.garageSale)
@@ -137,15 +135,66 @@ garageSaleApp.controller('garageController', function($scope, $http, $filter, Fl
 
       };  
     
+    // to read the garage sale choosen from index page
+    var garageSaleId = $location.search().garage_id;
+    if (garageSaleId != undefined){
+        $http.get('/api/garages/'+garageSaleId)
+            .success(function(data) {
+                $scope.garageSale = data;
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+    }
+    
+    
 });
 
 // create the controller and inject Angular's $scope
 garageSaleApp.controller('itemController', function($scope, $http, $filter, Flash, $cookies, $location) {
     //to save garageSaleId on each item
     var garageSaleId = $cookies['garageSaleId'];
-    alert(garageSaleId);
     
-    // to read the garage sale choosen from index page
-    alert($location.search().garage_id);
+    if (garageSaleId != undefined){
+        $http.get('/api/garages/'+garageSaleId)
+            .success(function(data) {
+                $scope.garageSale = data;
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+    }
+    
+    $scope.cancelItem = function() {
+       $scope.item ={};
+    };
+    
+    $scope.createItem = function(isValid) {
+        
+        $scope.submitted = true;
+
+        // check to make sure the form is completely valid
+        if (isValid) {
+            $scope.submitted = false;
+
+			//setting default values for template 
+			$scope.item.image = "images\/bed.jpg";
+            $scope.item.garageSaleId = garageSaleId;
+
+			//after getting all the values for item, save it
+			$http.post('/api/items', $scope.item)
+				.success(function(data) {
+					$scope.item = {}; // to add more itens
+					message = '<strong>Success!</strong> Item added';
+					Flash.create('success', message);
+				})
+				.error(function(data) {
+					console.log('Error: ' + data);
+				});
+		};
+
+    };  
+    
+    
 });
 

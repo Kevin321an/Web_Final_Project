@@ -1,35 +1,12 @@
 {"markers": [
     {
-        "_id": "566f5d26559607540f5334b7",
-        "time": "10:00",
+        "_id": "5670a6e5b1025f041f9248d5",
+        "open": false,
+        "time": "13:00",
         "date": "2015-12-19",
-        "phoneNumber": "2269721003",
-        "contactName": "Anna",
-        "icon": "house-02",
-        "template": "real-estate-map-pop_home",
-        "ribbon_mark_class": "ribbon-primary",
-        "ribbon_mark_text": "Garage Sale",
-        "details_url": "map-property.html",
-        "image": "images/photodune-196089-house-xs.jpg",
-        "location": "250 Allendale Rd, Cambridge, ON N3H 4R6, Canada",
-        "title": "The best",
-        "longitude": -80.39428499999997,
-        "latitude": 43.427419,
-        "__v": 0,
-        "items": [],
-        "options": {
-            "bound": true,
-            "tags": [
-                "House"
-            ]
-        }
-    },
-    {
-        "_id": "566f8deef7fb47680eabda74",
-        "time": "13:58",
-        "date": "2015-12-26",
-        "contactName": "we",
-        "icon": "house-02",
+        "phoneNumber": "(519)729-0372",
+        "contactName": "Professor",
+        "icon": "house-01",
         "template": "real-estate-map-pop_home",
         "ribbon_mark_class": "ribbon-primary",
         "ribbon_mark_text": "Garage Sale",
@@ -39,52 +16,6 @@
         "title": "Conestoga College",
         "longitude": -80.4041565,
         "latitude": 43.3892703,
-        "__v": 0,
-        "items": [],
-        "options": {
-            "bound": true,
-            "tags": [
-                "House"
-            ]
-        }
-    },
-    {
-        "_id": "566f8f6af7fb47680eabda75",
-        "time": "00:00",
-        "date": "2015-12-12",
-        "icon": "house-08",
-        "template": "real-estate-map-pop_home",
-        "ribbon_mark_class": "ribbon-primary",
-        "ribbon_mark_text": "Garage Sale",
-        "details_url": "map-property.html",
-        "image": "images/photodune-196089-house-xs.jpg",
-        "location": "101 Southwood Dr, Kitchener, ON N2E 2J1, Canada",
-        "title": "With tag 2",
-        "longitude": -80.47257000000002,
-        "latitude": 43.4078957,
-        "__v": 0,
-        "items": [],
-        "options": {
-            "bound": true,
-            "tags": [
-                "House"
-            ]
-        }
-    },
-    {
-        "_id": "566f9048f7fb47680eabda76",
-        "time": "02:03",
-        "date": "2015-12-25",
-        "icon": "house-05",
-        "template": "real-estate-map-pop_home",
-        "ribbon_mark_class": "ribbon-primary",
-        "ribbon_mark_text": "Garage Sale",
-        "details_url": "map-property.html",
-        "image": "images/photodune-196089-house-xs.jpg",
-        "location": "182-220 Fairway Rd N, Kitchener, ON N2A 4J8, Canada",
-        "title": "Bom hotel",
-        "longitude": -80.4084049,
-        "latitude": 43.4470055,
         "__v": 0,
         "items": [],
         "options": {

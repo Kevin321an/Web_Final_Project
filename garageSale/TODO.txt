@@ -3,10 +3,10 @@ TO DO:
 
 Items:
 get some pictures to sell items (we have a sofa and a bed) save them on garageSale\public\images
-Prepare the screen to use angularjs
-validate fields before saving
+Ady - Prepare the screen to use angularjs
+Ady - validate fields before saving
 Ady - create schema
-server URL
+Ady - server URL
 Read data from database and display on screen
 Ady - Setting informations to display items on screen
 
@@ -16,9 +16,11 @@ work on delete markers (if really necessary)
 Think about the Flash message (where to display it)
 Think about when and where to show the "Add Items" button
 
-
 User:
 Lalit - Login
 save password using encryption
 put "Add Garage Sale" and "login picture" buttons hidden until login is completed
 add user to the garage model
+
+All screens:
+Add a Loading... event

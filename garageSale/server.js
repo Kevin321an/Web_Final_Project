@@ -26,6 +26,7 @@ mongoose.connection.on('error', function(err){console.log(err);})
 //load models
 var User = require('./app/models/user');
 var Garage = require('./app/models/garage');
+var Item = require('./app/models/item');
 
 
 //setup router
@@ -113,6 +114,7 @@ router.route('/garages')
         garage.phoneNumber = req.body.phoneNumber;
         garage.date = req.body.date;
         garage.time = req.body.time;
+        garage.open = req.body.open;
        
         
         garage.save(function(err){
@@ -123,6 +125,52 @@ router.route('/garages')
             res.json(garage);
         });
     });
+
+router.route('/garages/:garage_id')
+
+    .get(function(req, res){
+        Garage.findById(req.params.garage_id, function(err, garage){
+            if(err){
+                res.send(err);
+            }
+            
+            garage.template = "tpl-edit";
+            garage.open = true;
+            
+            //save the current garage found in a json file, so map can read and edit it
+            var text = '{"markers": [' + JSON.stringify(garage, null, 4) + ']}';
+           fs.writeFile('public/js/data/google_maps/markers-edit.json', text, function (err) {
+            if (err){
+				res.send(err);
+			}
+              console.log('File saved');
+               res.json(garage);
+            });  
+    
+            
+        });
+    });
+
+//Item
+router.route('/items')
+
+	.post(function(req, res){
+        var item = new Item();
+        item.title = req.body.title;
+        item.image = req.body.image;
+        item.garageSaleId = req.body.garageSaleId;
+        item.price = req.body.price;
+		item.description = req.body.description;
+        
+        item.save(function(err){
+            if (err){
+                res.send(err);
+            }
+            
+            res.json(item);
+        });
+    });
+
 
 router.route('/login')
 .get(function (req, res) {
