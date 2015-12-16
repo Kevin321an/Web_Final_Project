@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs" lang="en" ng-app="garageSaleApp" ng-controller="itemController">
+<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs" lang="en" ng-app="garageSaleApp" ng-controller="garageController">
 
 <head>
   <meta charset="utf-8">
@@ -27,15 +27,15 @@
     <aside class="sidebar right sidebar-size-xs-1 sidebar-size-lg-48pc sidebar-size-40pc sidebar-offset-0 sidebar-skin-white sidebar-visible-desktop" id=sidebar-map data-toggle-layout=true data-toggle-bar=true>
       <div data-scrollable>
         <div class="sidebar-block">
-          <h3 class="sidebar-heading margin-bottom-none">Conestoga College</h3>
-          <p class="lead">200 Doon Valley Drive</p>
+          <h3 class="sidebar-heading margin-bottom-none">{{garageSale.title}}</h3>
+          <p class="lead">{{garageSale.location}}</p>
          </div>
              <div class="sidebar-block property-meta">
               <div class="property-meta-item text-h5">
-                <i class="fa fa-clock-o fa-fw"></i> From 8 to 11 am
+                <i class="fa fa-clock-o fa-fw"></i> {{garageSale.time}}
               </div>
               <div class="property-meta-item">
-                <i class="fa fa-calendar-o fa-fw"></i> Saturday - 2015/12/03
+                <i class="fa fa-calendar-o fa-fw"></i> {{garageSale.date | date:'EEEE'}} - {{garageSale.date}}
               </div>
             </div>
             <h4 class="category">Items</h4>
@@ -81,11 +81,11 @@
         <div class="sidebar-block">
             <h4 class="category">Contact</h4>
             <p>
-                <strong>Michelle D.</strong>
+                <strong>{{garageSale.contactName}}</strong>
             </p>
             <p>
                 <i class="icon icon-phone"></i>
-                +15197220000
+                {{garageSale.phoneNumber}}
             </p>
         </div>
         </div>
@@ -129,7 +129,7 @@
                 {{ ribbon_mark_text }}
               </div>
               <div class="cover cover-image-full margin-none">
-                <a href="{{ details_url }}" class="thumb" data-height="150px">
+                <a href="{{ details_url }}#?garage_id={{_id}}" onclick="window.location.reload();" class="thumb" data-height="150px">
                   <img src="{{ image }}" alt="image" class="img-responsive">
                 </a>
               </div>

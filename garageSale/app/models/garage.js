@@ -23,6 +23,7 @@ var GarageSchema = new Schema({ //internally
 	phoneNumber: String,
     date: String,
     time: String,
+    open: Boolean,
     items: [String]
 });
 

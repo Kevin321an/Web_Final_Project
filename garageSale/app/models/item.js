@@ -9,6 +9,7 @@ var ItemSchema = new Schema({ //internally
     title: String,
 	description: String,
     price: Number,
+    image: String
 });
 
 module.exports = mongoose.model('Item', ItemSchema); //externally

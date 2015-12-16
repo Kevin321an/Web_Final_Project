@@ -1,14 +1,26 @@
-{
-	"markers": [
-		{
-			"latitude": 43.389758, 
-			"longitude": -80.405068,
-			"state": "",
-			"country": "",
-			"address": "",
-			"template": "tpl-edit",
-			"icon": "house-02",
-			"open": true
-		}
-	]
-}
+{"markers": [{
+    "_id": "5670c4b2b1025f041f9248d6",
+    "open": true,
+    "time": "15:00",
+    "date": "2015-12-18",
+    "phoneNumber": "(226)972-1003",
+    "contactName": "Junior",
+    "icon": "house-09",
+    "template": "tpl-edit",
+    "ribbon_mark_class": "ribbon-primary",
+    "ribbon_mark_text": "Garage Sale",
+    "details_url": "map-property.html",
+    "image": "images/photodune-196089-house-xs.jpg",
+    "location": "145 Vanier Dr, Cambridge, ON N1R 5S2, Canada",
+    "title": "Cambridge",
+    "longitude": -80.26103369999998,
+    "latitude": 43.34652730000001,
+    "__v": 0,
+    "items": [],
+    "options": {
+        "bound": true,
+        "tags": [
+            "House"
+        ]
+    }
+}]}
