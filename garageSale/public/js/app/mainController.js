@@ -37,7 +37,7 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
     $scope.login = function() {
         $http.post('/api/login', $scope.user)
             .success(function(data) {
-                //$scope.user = {}; // clear the form so our user is ready to enter another
+                $scope.user = data; 
                 var message = '<strong>Success!</strong> Login done.';
                 Flash.create('success', message);
             $http.get('/api/session', $scope.user)
