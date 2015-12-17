@@ -28,13 +28,22 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
                 //$scope.user = {}; // clear the form so our user is ready to enter another
                 var message = '<strong>Success!</strong> Login done.';
                 Flash.create('success', message);
+            $http.get('/api/session', $scope.user)
+            .success(function(data)
+                     {
+                        var message = '<strong>Success!</strong> Session done.';
+                        Flash.create('success', message);
+                    })
+            
             })
             .error(function(data) {
+                var messages=' Wrong Username & Password';
+                Flash.create('danger', messages);
                 console.log('Error: ' + data);
             });
     };
      $scope.logout = function() {
-        $http.post('/api/logout', $scope.user)
+        $http.get('/api/logout', $scope.user)
             .success(function(data) {
                 //$scope.user = {}; // clear the form so our user is ready to enter another
                 var message = '<strong>Success!</strong> Logout done.';

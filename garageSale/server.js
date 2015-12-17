@@ -143,7 +143,7 @@ router.route('/login')
         })
     });
 
-router.get('/dashboard',function(req,res){
+router.get('/session',function(req,res){
     if(!req.session.user){                          //Checking users sessions
         return res.status(401).send();
     }
