@@ -31,8 +31,8 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
             $http.get('/api/session', $scope.user)
             .success(function(data)
                      {
-                        var message = '<strong>Success!</strong> Session done.';
-                        Flash.create('success', message);
+                        //var message = '<strong>Success!</strong> Session done.';
+                        //Flash.create('success', message);
                     })
             
             })
