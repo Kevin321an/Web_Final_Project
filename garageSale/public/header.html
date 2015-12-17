@@ -28,7 +28,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <!-- Add garage sale -->
-        <li class="dropdown">
+        <li ng-show="showModule" class="dropdown"><!--hiding elements ng hide-->
           <a href="map-edit.html">
             <i class="fa fa-fw fa-home"></i> Add garage sale
           </a>
@@ -96,7 +96,7 @@
         </li>
         <!-- // END sign up -->
         <!-- user -->
-        <li class="dropdown user">
+        <li ng-show="showModule" class="dropdown user">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="images/people/talk.jpg" alt="" class="img-circle" /> TALK<span class="caret"></span>
           </a>

@@ -43,6 +43,7 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
             $http.get('/api/session', $scope.user)
             .success(function(data)
                      {
+                        $scope.showModule=true;
                         //var message = '<strong>Success!</strong> Session done.';
                         //Flash.create('success', message);
                     })
@@ -57,6 +58,7 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
      $scope.logout = function() {
         $http.get('/api/logout', $scope.user)
             .success(function(data) {
+            $scope.showModule=false;
                 //$scope.user = {}; // clear the form so our user is ready to enter another
                 var message = '<strong>Success!</strong> Logout done.';
                 Flash.create('success', message);
