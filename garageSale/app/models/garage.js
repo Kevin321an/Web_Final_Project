@@ -24,7 +24,9 @@ var GarageSchema = new Schema({ //internally
     date: String,
     time: String,
     open: Boolean,
-    items: [String]
+    items: [String],
+    userId:String
+    
 });
 
 module.exports = mongoose.model('Garage', GarageSchema); //externally

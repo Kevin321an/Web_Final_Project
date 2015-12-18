@@ -39,6 +39,7 @@ garageSaleApp.controller('userController', function($scope, $http, Flash, $cooki
             .success(function(data) {
                 $scope.user = data; 
                 var message = '<strong>Success!</strong> Login done.';
+                $cookies.userId = $scope.user._id;
                 Flash.create('success', message);
             $http.get('/api/session', $scope.user)
             .success(function(data)
@@ -75,6 +76,7 @@ garageSaleApp.controller('garageController', function($scope, $http, $filter, Fl
     
     //system messages
     var message = '';
+    $scope.showModule=true;//making it false to hide login button
     
      //to control if the form was submitted
     $scope.submitted = false;
@@ -99,6 +101,8 @@ garageSaleApp.controller('garageController', function($scope, $http, $filter, Fl
             //setting formats
             $scope.garageSale.date = $filter('date')($scope.garageSale.date, "yyyy-MM-dd");
             $scope.garageSale.time = $filter('date')($scope.garageSale.time, "HH:mm");
+            $scope.garageSale.userId=$cookies['userId'];
+            
 
             $scope.garageSale.location = angular.element('#address').val();
 

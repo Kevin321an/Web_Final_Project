@@ -126,5 +126,58 @@
                 "House"
             ]
         }
+    },
+    {
+        "_id": "567353fb099f6b8814cd1e84",
+        "open": false,
+        "time": "13:02",
+        "date": "2015-12-16",
+        "phoneNumber": "123",
+        "contactName": "123",
+        "icon": "house-07",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "location": "2200 Homer Watson Blvd, Kitchener, ON N2P 1A5, Canada",
+        "title": "123",
+        "longitude": -80.42278099999999,
+        "latitude": 43.389311,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "56735ee585742f84413742f8",
+        "open": false,
+        "time": "14:03",
+        "date": "2015-12-31",
+        "phoneNumber": "2269787180",
+        "contactName": "jiwid",
+        "icon": "house-05",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "userId": "5673460e8fa3c1cc0ae1d14e",
+        "location": "Conestoga College Blvd, Kitchener, ON N2P 2N6, Canada",
+        "title": "Mr",
+        "longitude": -80.4116065,
+        "latitude": 43.3876204,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
     }
 ]}

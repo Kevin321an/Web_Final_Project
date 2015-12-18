@@ -101,6 +101,7 @@ router.route('/garages')
         garage.longitude = req.body.longitude;
         garage.title = req.body.title;
         garage.location = req.body.location;
+        garage.userId = req.body.userId;
         
         //template values
         garage.image = req.body.image;
