@@ -160,8 +160,7 @@ garageSaleApp.controller('garageController', function($scope, $http, $filter, Fl
             .error(function(data) {
                 console.log('Error: ' + data);
             });
-    }
-    
+    }   
     
 });
 
@@ -199,7 +198,7 @@ garageSaleApp.controller('itemController', function($scope, $http, $filter, Flas
 			//after getting all the values for item, save it
 			$http.post('/api/items', $scope.item)
 				.success(function(data) {
-					$scope.item = {}; // to add more itens
+					$scope.item = {}; // to add more items
 					message = '<strong>Success!</strong> Item added';
 					Flash.create('success', message);
 				})
