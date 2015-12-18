@@ -1,0 +1,26 @@
+{"markers": [{
+    "open": true,
+    "_id": "56720d2f34e1bdd41c260275",
+    "time": "12:59",
+    "date": "2015-12-31",
+    "phoneNumber": "22222222222",
+    "contactName": "asd",
+    "icon": "house-02",
+    "template": "tpl-edit",
+    "ribbon_mark_class": "ribbon-primary",
+    "ribbon_mark_text": "Garage Sale",
+    "details_url": "map-property.html",
+    "image": "images/photodune-196089-house-xs.jpg",
+    "location": "99 Conestoga College Blvd, Kitchener, ON N2P 2P8, Canada",
+    "title": "asd",
+    "longitude": -80.41198250000002,
+    "latitude": 43.3850431,
+    "__v": 0,
+    "items": [],
+    "options": {
+        "bound": true,
+        "tags": [
+            "House"
+        ]
+    }
+}]}

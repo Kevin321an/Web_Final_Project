@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs" lang="en" ng-app="garageSaleApp" ng-controller="garageController">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>TALK - Garage Sale</title>
+
+  <link href="css/vendor/all.css" rel="stylesheet">
+  <link href="css/vendor/bootstrap.css" rel="stylesheet"> 
+  <link href="css/app/app.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Wrapper required for sidebar transitions -->
+  <div class="st-container">
+
+      <!-- Fixed navbar -->
+      <div ng-include="'header.html'"></div>
+      <div flash-message="5000" class="alert-fixed"></div> 
+
+    <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
+    <aside class="sidebar right sidebar-size-xs-1 sidebar-size-lg-48pc sidebar-size-40pc sidebar-offset-0 sidebar-skin-white sidebar-visible-desktop" id=sidebar-edit data-toggle-layout=true data-toggle-bar=true >
+      <div data-scrollable >
+        <form name="form" required novalidate>
+          <div class="sidebar-block">
+            <h1 class="text-h3 sidebar-heading">Garage Sale Information</h1>
+          </div>
+          <div class="sidebar-block">
+            <h4 class="category">General information</h4>
+            <div class="form-group form-control-default required">
+              <label for="title">Title</label>
+              <input type="text" placeholder="Title" class="form-control" id="title" name="title" ng-model="garageSale.title" value="{{garageSale.title}}" required/>
+                <div ng-messages="form.title.$error" ng-if="submitted">
+                  <div ng-message="required" class="red">Title is required</div>
+                </div>
+            </div>
+            <div class="form-group form-control-default">
+              <label for="contact">Contact</label>
+              <input type="text" placeholder="Contact name" class="form-control" id="contact" ng-model="garageSale.contactName" value="{{garageSale.contactName}}"/>
+            </div>
+            <div class="form-group form-control-default">
+                <label for="phone">Phone number</label>
+               <input type="text" placeholder="Phone number" class="form-control" id="phone" ng-model="garageSale.phoneNumber" value="{{garageSale.phoneNumber}}"/>
+            </div>
+            <div class="form-group form-control-default required">
+                <label for="garageDate">Date</label>
+               <input type="date" class="form-control" name="garageDate" ng-model="garageSale.date" value="{{garageSale.date | date: 'yyyy-MM-dd'}}" required/>
+                 <div ng-messages="form.garageDate.$error" ng-if="submitted">
+                  <div ng-message="required" class="red">Date is required</div>
+                </div>
+            </div>
+            <div class="form-group form-control-default required">
+                <label for="garageTime">Time</label>
+               <input type="time" class="form-control" name="garageTime" ng-model="garageSale.time" value="{{garageSale.time | date: 'HH:mm'}}" required/>
+                 <div ng-messages="form.garageTime.$error" ng-if="submitted">
+                  <div ng-message="required" class="red">Time is required</div>
+                </div>
+            </div>
+          </div>
+          <div class="sidebar-block equal-padding">
+            <button type="submit" class="btn btn-primary" ng-click="createGarageSale(form.$valid)" ng-disabled="disableSaveButton">Save</button>
+            <button type="button" class="btn btn-default" ng-click="cancelGarageSale()"><i class="fa fa-times fa-fw"></i> Cancel</button>
+          </div>
+        </form>
+          <div class="sidebar-block" ng-show="form.$valid && submitted">
+              <a href="map-item-edit.html"><h4 class="category"> <i class="fa fa-fw fa-plus"></i> Add item</h4></a>
+          </div>   
+      </div>
+    </aside>
+
+    <!-- sidebar effects OUTSIDE of st-pusher: -->
+    <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
+
+    <!-- content push wrapper -->
+    <div class="st-pusher">
+
+      <!-- sidebar effects INSIDE of st-pusher: -->
+      <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+
+      <!-- this is the wrapper for the content -->
+      <div class="st-content">
+
+          <div id="google-fs-realestate" data-toggle="google-maps" data-zoom="16" data-id="map-edit" data-center="43.389758,-80.405068" data-zoom-position="LEFT_BOTTOM" class="maps-google-fs" data-style="nature"></div>
+
+          <div class="navbar navbar-default navbar-size-large navbar-static-top navbar-map-overlay">
+            <div class="navbar-text"><i class="fa fa-fw fa-info"></i> Click on the map to add markers</div>
+            <a data-toggle="sidebar-menu" href="#sidebar-edit" id="toggle-sidebar-edit" class="toggle pull-right active hidden-xs margin-none"><i class="fa fa-edit"></i></a>
+          </div>
+
+          <script id="tpl-edit" type="text/x-handlebars-template">
+            <div>
+              <div class="form-group">
+                <label for="state">Province:</label>
+                <input id="state" disabled class="form-control" type="text" 
+                       ng-model="garageSale.province" value="{{ state }}" />
+              </div>
+              <div class="form-group">
+                <label for="country">Country:</label>
+                <input id="country" disabled class="form-control" type="text" 
+                       ng-model="garageSale.country" value="{{ country }}" />
+              </div>
+              <div class="form-group">
+                <label for="address">Address:</label>
+                <input id="address" disabled class="form-control" type="text" 
+                       ng-model="garageSale.location" value="{{ address }}" />
+              </div>
+              <div class="form-group">
+                <button type="button" id="map-delete-marker" data-id="0" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
+              </div>
+            </div>
+          </script>
+
+        </div>
+        <!-- /st-content-inner -->
+
+    </div>
+    <!-- /st-pusher -->
+
+    <!-- Footer -->
+    <div ng-include="'footer.html'"></div>
+    <!-- // Footer -->
+
+  </div>
+
+  <!-- Inline Script for colors and config objects; used by various external scripts; -->
+   <script src="js/app/inline.js"></script>
+
+    <script src="js/vendor/all.js"></script>
+    <script src="js/vendor/angular/angular/angular.min.js"></script>
+    <script src="js/vendor/angular/angular/angular-messages.min.js"></script>
+    <script src="js/vendor/angular/angular/angular-flash.js"></script>
+    <script src="js/vendor/angular/angular/angular-cookies.js"></script>
+    
+    <script src="js/app/mainController.js"></script>
+
+  <script src="js/app/app.js"></script>
+
+</body>
+
+</html>

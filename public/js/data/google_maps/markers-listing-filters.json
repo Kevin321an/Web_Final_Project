@@ -1,0 +1,183 @@
+{"markers": [
+    {
+        "_id": "5670a6e5b1025f041f9248d5",
+        "open": false,
+        "time": "13:00",
+        "date": "2015-12-19",
+        "phoneNumber": "(519)729-0372",
+        "contactName": "Professor",
+        "icon": "house-01",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "location": "299 Doon Valley Dr, Kitchener, ON N2P 2N6, Canada",
+        "title": "Conestoga College",
+        "longitude": -80.4041565,
+        "latitude": 43.3892703,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "5670c4b2b1025f041f9248d6",
+        "open": false,
+        "time": "15:00",
+        "date": "2015-12-18",
+        "phoneNumber": "(226)972-1003",
+        "contactName": "Junior",
+        "icon": "house-09",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "location": "145 Vanier Dr, Cambridge, ON N1R 5S2, Canada",
+        "title": "Cambridge",
+        "longitude": -80.26103369999998,
+        "latitude": 43.34652730000001,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "56720cb034e1bdd41c260274",
+        "time": "02:33",
+        "date": "2015-12-31",
+        "phoneNumber": "2269787180",
+        "contactName": "Lalit",
+        "icon": "house-02",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "location": "ON-401, Kitchener, ON N2P, Canada",
+        "title": "Mr",
+        "longitude": -80.3920046,
+        "latitude": 43.3946183,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "56720d2f34e1bdd41c260275",
+        "time": "12:59",
+        "date": "2015-12-31",
+        "phoneNumber": "22222222222",
+        "contactName": "asd",
+        "icon": "house-02",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "location": "99 Conestoga College Blvd, Kitchener, ON N2P 2P8, Canada",
+        "title": "asd",
+        "longitude": -80.41198250000002,
+        "latitude": 43.3850431,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "5672ef2a60c4fa34246c6586",
+        "open": false,
+        "time": "12:59",
+        "date": "2015-12-31",
+        "phoneNumber": "2269787180",
+        "contactName": "Gurmeet",
+        "icon": "house-05",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "location": "350 Doon Valley Dr, Kitchener, ON N2P, Canada",
+        "title": "Mr",
+        "longitude": -80.4047205,
+        "latitude": 43.3924139,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "567353fb099f6b8814cd1e84",
+        "open": false,
+        "time": "13:02",
+        "date": "2015-12-16",
+        "phoneNumber": "123",
+        "contactName": "123",
+        "icon": "house-07",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "location": "2200 Homer Watson Blvd, Kitchener, ON N2P 1A5, Canada",
+        "title": "123",
+        "longitude": -80.42278099999999,
+        "latitude": 43.389311,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "56735ee585742f84413742f8",
+        "open": false,
+        "time": "14:03",
+        "date": "2015-12-31",
+        "phoneNumber": "2269787180",
+        "contactName": "jiwid",
+        "icon": "house-05",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "userId": "5673460e8fa3c1cc0ae1d14e",
+        "location": "Conestoga College Blvd, Kitchener, ON N2P 2N6, Canada",
+        "title": "Mr",
+        "longitude": -80.4116065,
+        "latitude": 43.3876204,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    }
+]}

@@ -1,0 +1,14 @@
+{
+  "name": "garage_sale_app",
+  "version": "0.0.3",
+  "description": "TALK - Garage Sale App",
+  "author": "Tiago, Ady, Lalit, Kevin",
+  "license": "",
+  "dependencies": {
+    "angular-md5": "^0.1.10",
+    "body-parser": "~1.0.1",
+    "express": "~4.8.0",
+    "express-session": "^1.12.1",
+    "mongoose": ""
+  }
+}
