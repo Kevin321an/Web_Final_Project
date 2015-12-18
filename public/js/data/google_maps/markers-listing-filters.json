@@ -179,5 +179,113 @@
                 "House"
             ]
         }
+    },
+    {
+        "_id": "567360274753d9e017149bf3",
+        "open": false,
+        "time": "14:22",
+        "date": "2015-12-31",
+        "phoneNumber": "2269787180",
+        "contactName": "najanli",
+        "icon": "house-05",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "userId": "5673460e8fa3c1cc0ae1d14e",
+        "location": "99 Conestoga College Blvd, Kitchener, ON N2P 2P8, Canada",
+        "title": "mr",
+        "longitude": -80.41198250000002,
+        "latitude": 43.3850431,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "56744617cb5682d414ae6e92",
+        "open": false,
+        "time": "01:01",
+        "date": "1901-01-01",
+        "phoneNumber": "123",
+        "contactName": "123",
+        "icon": "house-02",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "userId": "56734bfe099f6b8814cd1e83",
+        "location": "Fountain St S & Homer Watson Blvd & Macdonald-Cartier Fwy, Ontario, Canada",
+        "title": "123",
+        "longitude": -80.40543409999998,
+        "latitude": 43.38638,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "56746ad012f5b71c0a30adfd",
+        "open": false,
+        "time": "14:02",
+        "date": "1902-02-02",
+        "phoneNumber": "6477025722",
+        "contactName": "kevin",
+        "icon": "house-08",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "userId": "56734bfe099f6b8814cd1e83",
+        "location": "Fountain St S & Homer Watson Blvd & Macdonald-Cartier Fwy, Ontario, Canada",
+        "title": "Kevin's garage",
+        "longitude": -80.40543409999998,
+        "latitude": 43.38638,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
+    },
+    {
+        "_id": "56746cae12f5b71c0a30adff",
+        "open": false,
+        "time": "01:01",
+        "date": "1901-01-01",
+        "phoneNumber": "6477025722",
+        "contactName": "kevin",
+        "icon": "house-10",
+        "template": "real-estate-map-pop_home",
+        "ribbon_mark_class": "ribbon-primary",
+        "ribbon_mark_text": "Garage Sale",
+        "details_url": "map-property.html",
+        "image": "images/photodune-196089-house-xs.jpg",
+        "userId": "56734bfe099f6b8814cd1e83",
+        "location": "Conestoga College Blvd, Kitchener, ON N2P 2N6, Canada",
+        "title": "kevin 2nd garage",
+        "longitude": -80.4116065,
+        "latitude": 43.3876204,
+        "__v": 0,
+        "items": [],
+        "options": {
+            "bound": true,
+            "tags": [
+                "House"
+            ]
+        }
     }
 ]}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs" lang="en" ng-app="garageSaleApp" ng-controller="garageController">
+<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs" lang="en" ng-app="garageSaleApp" ng-controller="itemController","garageController">
+
 
 <head>
   <meta charset="utf-8">
@@ -35,10 +36,12 @@
                 <i class="fa fa-clock-o fa-fw"></i> {{garageSale.time}}
               </div>
               <div class="property-meta-item">
-                <i class="fa fa-calendar-o fa-fw"></i> {{garageSale.date | date:'EEEE'}} - {{garageSale.date}}
+                <i class="fa fa-calendar-o fa-fw"></i> {{garageSale.date | date:'EEEE'}} - {{garageSale.date}} {{garageSale.items}} {{item}} 
               </div>
             </div>
             <h4 class="category">Items</h4>
+           
+              
             <div class="sidebar-block sidebar-block-full">
 
               <div class="panel panel-default">
@@ -79,6 +82,7 @@
             </div>
           </div>
         <div class="sidebar-block">
+            <a href="map-item-edit.html"><h4 class="category"> <i class="fa fa-fw fa-plus"></i> Add item</h4></a>
             <h4 class="category">Contact</h4>
             <p>
                 <strong>{{garageSale.contactName}}</strong>
