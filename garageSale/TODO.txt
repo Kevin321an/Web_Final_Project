@@ -19,8 +19,8 @@ Think about when and where to show the "Add Items" button
 User:
 Lalit - Login
 save password using encryption
-put "Add Garage Sale" and "login picture" buttons hidden until login is completed
-add user to the garage model
+Lalit - put "Add Garage Sale" and "login picture" buttons hidden until login is completed
+Lalit - add user to the garage model
 
 All screens:
 Add a Loading... event
